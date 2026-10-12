@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aasaan Tools - 51 free online tools</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{--bg:#0a0a10;--card:#12121b;--ink:#f3efe6;--mute:#a09a8c;--line:#2b2a35;--gold:#d9b86c;--on:#1a1306;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f7f3ea;--card:#fffdf8;--ink:#1c1810;--mute:#6b6454;--line:#e0d7c3;--gold:#8f6a1c;--on:#fff}}
+:root[data-theme="dark"]{--bg:#0a0a10;--card:#12121b;--ink:#f3efe6;--mute:#a09a8c;--line:#2b2a35;--gold:#d9b86c;--on:#1a1306}
+:root[data-theme="light"]{--bg:#f7f3ea;--card:#fffdf8;--ink:#1c1810;--mute:#6b6454;--line:#e0d7c3;--gold:#8f6a1c;--on:#fff}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:radial-gradient(900px 420px at 50% -100px,color-mix(in srgb,var(--gold) 18%,transparent),transparent) no-repeat var(--bg);color:var(--ink);font:16px/1.6 Manrope,system-ui,sans-serif}
+h1,h2,h3,.logo,#sp b{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;margin:0}
+header,#home,#tv,#ct,footer{max-width:1000px;margin:auto;padding-left:16px;padding-right:16px}
+header{display:flex;align-items:center;gap:10px;padding-top:14px;padding-bottom:14px}
+.logo{font-size:28px;color:var(--ink);text-decoration:none;margin-right:auto}
+.logo span{color:var(--gold)}
+.mn{display:none}.mn a,footer a{color:var(--mute);text-decoration:none}
+#acct{display:flex;align-items:center;gap:8px}
+.hi{font-size:14px;color:var(--mute)}
+.btn{border:1px solid var(--gold);background:var(--gold);color:var(--on);padding:9px 16px;border-radius:4px;font:inherit;font-weight:600;font-size:14px;cursor:pointer}
+.btn.s{background:transparent;color:var(--ink);border-color:var(--line)}
+.ic{width:38px;height:38px;border-radius:4px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;font-size:16px}
+.hero{position:relative;text-align:center;padding:40px 0 26px}
+.hero h1{font-size:clamp(42px,10vw,72px);line-height:1}
+.sub{color:var(--mute);max-width:48ch;margin:14px auto 22px}
+input,select,textarea{width:100%;font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:4px;background:var(--card);color:var(--ink)}
+#q{max-width:520px;display:block;margin:auto}
+textarea{min-height:130px;resize:vertical}
+label{display:block;font-size:14px;color:var(--mute);margin:12px 0 4px}
+.ad{grid-column:1/-1;min-height:90px;margin:18px 0;border:1px dashed var(--line);display:grid;place-items:center;color:var(--mute);font-size:12px}
+h3{font-size:26px;margin:22px 0 10px}
+#pop{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.tool{display:flex;gap:12px;align-items:center;padding:14px;background:var(--card);border:1px solid var(--line);border-radius:6px;color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.tool:hover{border-color:var(--gold);transform:translateY(-2px)}
+.tool b{display:block;font-size:15px;line-height:1.3}
+.tool small{color:var(--mute);font-size:13px;line-height:1.3;display:block}
+.ico{flex:none;width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-weight:700}
+#nav{display:flex;gap:8px;overflow-x:auto;padding:6px 0 14px}
+#nav button{flex:none;border:1px solid var(--line);background:transparent;color:var(--ink);padding:8px 14px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer}
+#nav button[aria-current=true]{border-color:var(--gold);color:var(--gold)}
+#list{display:grid;gap:10px}
+@media(min-width:700px){#list{grid-template-columns:1fr 1fr}.mn{display:block}}
+section{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px;margin-top:10px}
+section h2{font-size:32px}
+.d{color:var(--mute);margin:2px 0 14px;font-size:14px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.row,.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.res{margin-top:14px}
+.res div{border:1px solid var(--line);border-radius:4px;padding:10px 12px;color:var(--mute);font-size:13px;cursor:copy}
+.res b{display:block;color:var(--ink);font-size:18px;white-space:pre-wrap;overflow-wrap:anywhere}
+.msg{color:var(--gold);margin-top:10px;font-size:14px}
+.bk{display:inline-block;margin:6px 0;color:var(--gold);text-decoration:none}
+dialog{background:var(--card);color:var(--ink);border:1px solid var(--gold);border-radius:6px;padding:24px;width:min(380px,92vw)}
+dialog::backdrop{background:#000a}
+dialog h2{font-size:30px}
+.lnk{background:none;border:0;color:var(--gold);font:inherit;cursor:pointer;padding:0;margin-top:12px}
+footer{text-align:center;color:var(--mute);font-size:14px;padding-top:30px;padding-bottom:30px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+#sp{position:fixed;inset:0;z-index:99;display:grid;place-content:center;justify-items:center;gap:18px;background:var(--bg);animation:out .7s 2.3s forwards}
+#sp b{font-size:clamp(30px,9vw,60px);line-height:1;letter-spacing:.3em;opacity:0;animation:tr 1.8s .2s cubic-bezier(.2,.7,.2,1) forwards}
+#sp i{height:1px;width:min(260px,60vw);background:var(--gold);transform:scaleX(0);animation:ln 1.4s .6s ease forwards}
+@keyframes tr{to{opacity:1;letter-spacing:.06em}}
+@keyframes ln{to{transform:scaleX(1)}}
+@keyframes out{to{opacity:0;visibility:hidden}}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+.stg{position:relative;height:130px;margin:-24px -24px 14px;overflow:hidden;border-radius:5px 5px 0 0;background:linear-gradient(160deg,color-mix(in srgb,var(--gold) 40%,var(--card)),var(--card));border-bottom:1px solid var(--gold)}
+.stg:after{content:'';position:absolute;left:0;right:0;bottom:12px;height:1px;background:var(--gold);opacity:.45}
+.wk{position:absolute;bottom:10px;left:calc(50% - 28px);width:56px;height:100px;animation:drop 1.3s cubic-bezier(.3,1.15,.5,1) both}
+.wk g{transform-origin:30px 62px}
+.wk .ab{transform-origin:30px 40px}
+.bd{animation:bob .275s 8 alternate ease-in-out}
+.la{animation:sw .55s 4 ease-in-out}
+.lb,.ab{animation:sw .55s 4 ease-in-out reverse}
+.fm>*{animation:up .6s 1.2s both}.fm>:nth-child(n+3){animation-delay:1.4s}.fm>:nth-child(n+6){animation-delay:1.6s}.fm>:nth-child(n+9){animation-delay:1.8s}
+@keyframes drop{from{transform:translateY(-190px)}}
+@keyframes sw{0%,100%{transform:rotate(0)}25%{transform:rotate(-26deg)}75%{transform:rotate(26deg)}}
+@keyframes bob{to{transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){#sp{display:none}.hero,.bd,.la,.lb,.ab,.fm{animation:none}.wk{animation:none;left:calc(50% - 28px)}}
+.hero>*{animation:up .9s both}
+.hero>:nth-child(3){animation-delay:.2s}
+.hero>:nth-child(4){animation-delay:.35s}
+.hero h1{background:linear-gradient(100deg,var(--ink) 35%,var(--gold) 50%,var(--ink) 65%) 100% 0/280% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:up .9s both,shine 5s 1s linear infinite}
+#fl{position:absolute;inset:0;overflow:hidden;pointer-events:none;animation:none}
+#fl i{position:absolute;bottom:-30px;font-style:normal;color:var(--gold);animation:fl 9s linear infinite}
+@keyframes shine{to{background-position:0 0}}
+@keyframes fl{0%{opacity:0}15%{opacity:.55}to{opacity:0;transform:translateY(-380px) rotate(40deg)}}
+#pop,#list{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.tool{position:relative;flex-direction:column;text-align:center;justify-content:center;padding:22px 12px 16px;min-height:150px;animation:pop .55s backwards}
+.tool .ico{width:56px;height:56px;font-size:26px;background:color-mix(in srgb,var(--gold) 10%,transparent)}
+.tool:hover{box-shadow:0 10px 30px -12px var(--gold);transform:translateY(-4px)}
+#pop .tool{border-color:color-mix(in srgb,var(--gold) 55%,var(--line))}
+.lk{position:absolute;top:8px;right:8px;font-style:normal;font-size:11px;color:var(--gold);border:1px solid var(--gold);border-radius:99px;padding:0 8px}
+@keyframes pop{from{opacity:0;transform:scale(.8) translateY(24px)}}
+@media(prefers-reduced-motion:reduce){.hero>*,.hero h1,#fl i,.tool{animation:none}}
+#pg{max-width:1000px;margin:auto;padding:0 16px}
+#pgc p{margin:0 0 12px}
+#pgc h3{font-size:22px;margin:18px 0 6px}
+#pgc a{color:var(--gold)}
+footer a{margin:0 4px}
+</style></head><body>
+
+<header><a class="logo" href="#">Aasaan <span>Tools</span></a><nav class="mn"><a href="#contact">Contact</a></nav><div id="acct"></div><button class="ic" onclick="thm()" aria-label="Switch light or dark theme">&#9680;</button></header>
+<div id="home">
+<div class="hero"><div id="fl"></div><h1>Free tools, finely made.</h1><p class="sub"><span id="cnt"></span> free tools for text, money, code and AI. Use most of them right away, no sign-up. AI tools need a free account.</p><input id="q" type="search" placeholder="Search tools: age, EMI, QR, translate" oninput="draw()" aria-label="Search tools"></div>
+<div class="ad"><!-- ADS: paste your ad code here --><span>Advertisement</span></div>
+<h3>Most used</h3><div id="pop"></div><div class="ad"><!-- ADS: paste your ad code here --><span>Advertisement</span></div>
+<h3>All tools</h3><div id="nav"></div><div id="list"></div>
+</div>
+<div id="tv" hidden><a class="bk" href="#">Back to all tools</a><section id="tool"></section><div class="ad"><!-- ADS: paste your ad code here --><span>Advertisement</span></div></div>
+<div id="ct" hidden><a class="bk" href="#">Back to all tools</a><section><h2>Contact us</h2><p class="d">Found a problem or want a new tool? Tell us and we will fix or build it. Email: <a href="mailto:freetoolsxgaming@gmail.com" style="color:var(--gold)">freetoolsxgaming@gmail.com</a></p>
+<form onsubmit="sendC(event)"><label for="cN">Your name</label><input id="cN" required><label for="cE">Your email</label><input id="cE" type="email" required><label for="cT">What is this about?</label><select id="cT"><option>Report a problem</option><option>Suggest a tool</option><option>Ads or business</option><option>Something else</option></select><label for="cM">Message</label><textarea id="cM" required placeholder="Which tool, and what went wrong?"></textarea><div class="bar"><button class="btn">Send message</button></div><p class="d">This opens your email app with the message ready to send.</p></form></section></div>
+<div id="pg" hidden><a class="bk" href="#">Back to all tools</a><section id="pgc"></section></div>
+<dialog id="au"><div class="stg"><svg class="wk" viewBox="0 0 60 100" aria-hidden="true"><ellipse cx="30" cy="97" rx="18" ry="3" fill="#000" opacity=".25"/><g class="lb"><rect x="26" y="62" width="8" height="32" rx="4" fill="#3a3a4c"/><rect x="24" y="90" width="15" height="6" rx="3" fill="#f3efe6"/></g><g class="ab"><rect x="14" y="37" width="7" height="26" rx="3.5" fill="#9d98ae"/></g><g class="la"><rect x="26" y="62" width="8" height="32" rx="4" fill="#2a2a3a"/><rect x="24" y="90" width="15" height="6" rx="3" fill="#f3efe6"/></g><g class="bd"><rect x="18" y="34" width="24" height="32" rx="8" fill="#c9c4d6"/><circle cx="30" cy="22" r="12" fill="#f1c9a5"/><path d="M18 21a12 12 0 0 1 24 0c-6-4-14-4-24 0z" fill="#e6b94d"/><circle cx="35" cy="23" r="1.4" fill="#222"/><rect x="38" y="38" width="7" height="26" rx="3.5" fill="#b4afc4"/><rect x="38" y="64" width="20" height="15" rx="3" fill="#7a3b24"/><path d="M44 64v-3h8v3" stroke="#d9b86c" stroke-width="1.5" fill="none"/></g></svg></div><form class="fm" onsubmit="sub(event)"><h2 id="auT"></h2><p class="d">A free account. You need one for the AI tools.</p><div id="auNW"><label for="auN">Your name</label><input id="auN" autocomplete="name"></div><label for="auE">Email</label><input id="auE" type="email" required autocomplete="email"><label for="auP">Password</label><input id="auP" type="password" required minlength="6" autocomplete="current-password"><div class="msg" id="auM"></div><div class="bar"><button class="btn" id="auS"></button><button type="button" class="btn s" onclick="$('au').close()">Cancel</button></div><button type="button" class="lnk" id="auW" onclick="auth(mode=='in'?'up':'in')"></button></form></dialog>
+<footer><p>This Web Created by Ibrar Ahmad</p><p><a href="#about">About</a> &middot; <a href="#privacy">Privacy Policy</a> &middot; <a href="#terms">Terms</a> &middot; <a href="#contact">Contact us</a> &middot; <a href="mailto:freetoolsxgaming@gmail.com">freetoolsxgaming@gmail.com</a></p></footer>
+<script>
+const $=i=>document.getElementById(i),E=s=>[...document.querySelectorAll(s)],esc=s=>String(s).replace(/[&<>"']/g,c=>'&#'+c.charCodeAt(0)+';'),f=(x,d=2)=>isFinite(x)?(+x).toLocaleString(undefined,{maximumFractionDigits:d}):'-';
+const LS={g(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},s(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const D=[],add=(id,cat,ic,nm,ds,o)=>D.push({id,cat,ic,nm,ds,...o}),X=(id,cat,ic,nm,ds,m)=>add(id,cat,ic,nm,ds,{k:'t',m}),C=(id,cat,ic,nm,ds,fl,fn)=>add(id,cat,ic,nm,ds,{k:'c',fl,fn}),V=(id,ic,nm,ds,u,T)=>add(id,'Converters',ic,nm,ds,{k:'u',u,T}),A=(id,ic,nm,ds,m)=>add(id,'AI',ic,nm,ds,{k:'a',m});
+const H=a=>async s=>[...new Uint8Array(await crypto.subtle.digest(a,new TextEncoder().encode(s)))].map(b=>b.toString(16).padStart(2,'0')).join('');
+/* TEXT */
+X('words','Text','📊','Word counter','Words, characters, sentences, reading time',[['Count',s=>{const w=(s.match(/\S+/g)||[]).length;return`Words: ${w}\nCharacters: ${s.length}\nSentences: ${(s.match(/[.!?\u06D4]+/g)||[]).length}\nLines: ${s?s.split('\n').length:0}\nReading time: ${Math.ceil(w/200)} min`}]]);
+X('case','Text','Aa','Case converter','Upper, lower, title and sentence case',[['UPPER',s=>s.toUpperCase()],['lower',s=>s.toLowerCase()],['Title Case',s=>s.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase())],['Sentence case',s=>s.toLowerCase().replace(/(^\s*|[.!?]\s+)(\w)/g,(x,a,b)=>a+b.toUpperCase())]]);
+X('dedupe','Text','🧹','Remove duplicate lines','Keep only the first copy of each line',[['Remove duplicates',s=>[...new Set(s.split('\n'))].join('\n')]]);
+X('sort','Text','↕️','Sort lines','Sort a list alphabetically',[['A to Z',s=>s.split('\n').sort((a,b)=>a.localeCompare(b)).join('\n')],['Z to A',s=>s.split('\n').sort((a,b)=>b.localeCompare(a)).join('\n')]]);
+X('reverse','Text','🔁','Text reverser','Reverse letters or word order',[['Reverse text',s=>[...s].reverse().join('')],['Reverse words',s=>s.split(/\s+/).reverse().join(' ')]]);
+X('spaces','Text','✂️','Space cleaner','Remove extra spaces and blank lines',[['Clean up',s=>s.replace(/[ \t]+/g,' ').replace(/\n\s*\n+/g,'\n').trim()]]);
+X('slug','Text','🔗','Slug maker','Turn a title into a clean URL slug',[['Make slug',s=>s.toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')]]);
+X('binary','Text','01','Text to binary','Convert text to binary and back',[['To binary',s=>[...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')],['From binary',s=>new TextDecoder().decode(new Uint8Array(s.trim().split(/\s+/).map(b=>parseInt(b,2))))]]);
+/* CALCULATORS */
+C('age','Calculators','🎂','Age calculator','Your exact age from date of birth',['Date of birth:d'],v=>{const b=new Date(v[0]),n=new Date();if(b>n)throw 0;let y=n.getFullYear()-b.getFullYear(),m=n.getMonth()-b.getMonth(),d=n.getDate()-b.getDate();if(d<0){m--;d+=new Date(n.getFullYear(),n.getMonth(),0).getDate()}if(m<0){y--;m+=12}return[['Age',y+' years, '+m+' months, '+d+' days'],['Days lived',f((n-b)/864e5,0)]]});
+C('bmi','Calculators','⚖️','BMI calculator','Body mass index from height and weight',['Height (cm):n','Weight (kg):n'],v=>{const b=v[1]/(v[0]/100)**2;return[['BMI',f(b,1)],['Category',b<18.5?'Underweight':b<25?'Normal':b<30?'Overweight':'Obese']]});
+C('pct','Calculators','%','Percentage calculator','Percent of, percent change and more',['A:n','B:n'],v=>[['A% of B',f(v[0]*v[1]/100,4)],['A is what % of B',f(v[0]/v[1]*100)+'%'],['Change from A to B',f((v[1]-v[0])/v[0]*100)+'%']]);
+C('emi','Calculators','🏦','Loan EMI calculator','Monthly payment, interest and total',['Loan amount:n','Yearly interest %:n','Years:n'],v=>{const i=v[1]/1200,n=v[2]*12,e=i?v[0]*i*(1+i)**n/((1+i)**n-1):v[0]/n;return[['Monthly payment',f(e,0)],['Total interest',f(e*n-v[0],0)],['Total payment',f(e*n,0)]]});
+C('compound','Calculators','📈','Compound interest','See how your savings grow',['Starting amount:n','Yearly rate %:n','Years:n','Times per year:n:12'],v=>{const a=v[0]*(1+v[1]/100/v[3])**(v[3]*v[2]);return[['Final amount',f(a,0)],['Interest earned',f(a-v[0],0)]]});
+C('discount','Calculators','🏷️','Discount calculator','Sale price and how much you save',['Price:n','Discount %:n'],v=>[['You pay',f(v[0]*(1-v[1]/100))],['You save',f(v[0]*v[1]/100)]]);
+C('tip','Calculators','🍽️','Tip and bill splitter','Split a bill between friends',['Bill:n','Tip %:n:10','People:n:1'],v=>{const t=v[0]*v[1]/100;return[['Tip',f(t)],['Total',f(v[0]+t)],['Each person pays',f((v[0]+t)/v[2])]]});
+C('vat','Calculators','🧾','VAT and GST calculator','Add or find the tax in an amount',['Amount:n','Tax rate %:n'],v=>[['Tax on top',f(v[0]*v[1]/100)],['Total with tax',f(v[0]*(1+v[1]/100))],['Tax inside the amount',f(v[0]-v[0]/(1+v[1]/100))]]);
+C('zakat','Calculators','🕌','Zakat calculator','2.5% of your net wealth. Check the nisab first.',['Cash and savings:n','Gold value:n','Silver value:n','Business assets:n','Debts you owe:n'],v=>{const n=v[0]+v[1]+v[2]+v[3]-v[4];return[['Net wealth',f(n,0)],['Zakat due (2.5%)',f(Math.max(n,0)*.025,0)]]});
+C('datediff','Calculators','📅','Date difference','Days between two dates',['From:d','To:d'],v=>{const d=Math.abs(new Date(v[1])-new Date(v[0]))/864e5;return[['Days',f(d,0)],['Weeks',f(d/7,1)],['Months (approx.)',f(d/30.44,1)]]});
+C('fuel','Calculators','⛽','Fuel cost calculator','Cost of a trip',['Distance (km):n','Mileage (km per litre):n','Fuel price per litre:n'],v=>{const l=v[0]/v[1];return[['Fuel needed',f(l)+' L'],['Trip cost',f(l*v[2],0)]]});
+C('average','Calculators','➗','Average calculator','Sum, average, smallest and largest',['Numbers (comma separated):t'],v=>{const a=v[0].split(/[,\s]+/).filter(Boolean).map(Number).filter(x=>x==x),s=a.reduce((p,c)=>p+c,0);return[['Count',a.length],['Sum',f(s)],['Average',f(s/a.length)],['Smallest',f(Math.min(...a))],['Largest',f(Math.max(...a))]]});
+C('margin','Calculators','💼','Profit margin calculator','Profit, margin and markup',['Cost:n','Selling price:n'],v=>{const p=v[1]-v[0];return[['Profit',f(p)],['Margin',f(p/v[1]*100)+'%'],['Markup',f(p/v[0]*100)+'%']]});
+C('power','Calculators','💡','Electricity bill','Units used times your rate',['Units (kWh):n','Rate per unit:n'],v=>[['Bill',f(v[0]*v[1],0)]]);
+C('cgpa','Calculators','🎓','CGPA to percentage','Approximate percentage from CGPA',['CGPA:n','Out of (4, 5 or 10):n:4'],v=>[['Approx. percentage',f(v[1]==10?v[0]*9.5:v[0]/v[1]*100,1)+'%']]);
+/* CONVERTERS */
+V('len','📏','Length converter','Metres, km, miles, feet and more',{m:1,km:1000,cm:.01,mm:.001,mile:1609.344,yard:.9144,foot:.3048,inch:.0254});
+V('wt','🏋️','Weight converter','Kilograms, pounds, tola and more',{kg:1,g:.001,mg:1e-6,tonne:1000,lb:.45359237,oz:.028349523,tola:.0116638});
+V('temp','🌡️','Temperature converter','Celsius, Fahrenheit and Kelvin',{'°C':1,'°F':1,K:1},1);
+V('area','🗺️','Area converter','Marla, kanal, acre, sq ft and more',{'sq m':1,'sq km':1e6,hectare:1e4,acre:4046.8564,'sq ft':.09290304,'sq yard':.83612736,marla:25.2929538,kanal:505.857});
+V('vol','🧪','Volume converter','Litres, gallons, cups and more',{litre:1,ml:.001,'cubic m':1000,'gallon (US)':3.785411784,cup:.2365882,'fl oz':.0295735});
+V('spd','🚀','Speed converter','km/h, mph, m/s and knots',{'m/s':1,'km/h':.277778,mph:.44704,knot:.514444});
+V('data','💾','Data size converter','Bytes, KB, MB, GB and TB',{B:1,KB:1024,MB:1048576,GB:1073741824,TB:1099511627776});
+V('time','⏳','Time converter','Seconds, minutes, hours, days',{second:1,minute:60,hour:3600,day:86400,week:604800,year:31557600});
+/* DEVELOPER */
+X('json','Developer','{}','JSON formatter','Check, format or minify JSON',[['Format',s=>JSON.stringify(JSON.parse(s),null,2)],['Minify',s=>JSON.stringify(JSON.parse(s))]]);
+X('b64','Developer','🔐','Base64 encoder','Encode and decode Base64',[['Encode',s=>btoa(unescape(encodeURIComponent(s)))],['Decode',s=>decodeURIComponent(escape(atob(s.trim())))]]);
+X('url','Developer','🌐','URL encoder','Encode and decode URLs',[['Encode',encodeURIComponent],['Decode',decodeURIComponent]]);
+X('html','Developer','&lt;/&gt;','HTML escape','Escape or unescape HTML characters',[['Escape',s=>s.replace(/[&<>"']/g,c=>'&#'+c.charCodeAt(0)+';')],['Unescape',s=>{const t=document.createElement('textarea');t.innerHTML=s;return t.value}]]);
+X('hash','Developer','#️⃣','Hash generator','SHA-1, SHA-256 and SHA-512',[['SHA-1',H('SHA-1')],['SHA-256',H('SHA-256')],['SHA-512',H('SHA-512')]]);
+X('stamp','Developer','⏱️','Unix timestamp','Convert timestamps and dates',[['To date',s=>new Date(s.trim().length<12?s*1000:+s).toString()],['To timestamp',s=>String(Math.floor(new Date(s)/1000))],['Now',()=>String(Math.floor(Date.now()/1000))]]);
+X('color','Developer','🎨','Color converter','HEX to RGB and HSL (example: #0f7f82)',[['Convert',s=>{const h=s.trim().replace('#','');if(!/^[0-9a-f]{6}$/i.test(h))throw 0;const n=parseInt(h,16),R=n>>16,G=n>>8&255,B=n&255,a=[R,G,B].map(x=>x/255),mx=Math.max(...a),mn=Math.min(...a),l=(mx+mn)/2,d=mx-mn;let q=0,S=0;if(d){S=d/(1-Math.abs(2*l-1));q=60*(mx==a[0]?((a[1]-a[2])/d+6)%6:mx==a[1]?(a[2]-a[0])/d+2:(a[0]-a[1])/d+4)}return`RGB: ${R}, ${G}, ${B}\nHSL: ${Math.round(q)}, ${Math.round(S*100)}%, ${Math.round(l*100)}%`}]]);
+/* GENERATORS */
+C('pw','Generators','🔑','Password generator','Strong random passwords',['Length:n:16','Symbols:s:Yes|No'],v=>{const s='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'+(v[1]=='Yes'?'!@#$%^&*-_=+?':'');return[['Password',[...crypto.getRandomValues(new Uint32Array(Math.min(Math.max(v[0],4),64)))].map(x=>s[x%s.length]).join('')]]});
+C('uuid','Generators','🆔','UUID generator','Random unique IDs',['How many:n:1'],v=>[['UUIDs',Array.from({length:Math.min(v[0]||1,20)},()=>crypto.randomUUID()).join('\n')]]);
+C('rand','Generators','🎲','Random number','Pick numbers in a range',['Min:n:1','Max:n:100','How many:n:1'],v=>[['Numbers',Array.from({length:Math.min(v[2]||1,50)},()=>v[0]+Math.floor(Math.random()*(v[1]-v[0]+1))).join(', ')]]);
+C('lorem','Generators','📄','Lorem ipsum','Placeholder text for designs',['Paragraphs:n:2'],v=>[['Text',Array(Math.min(v[0]||1,10)).fill('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.').join('\n\n')]]);
+add('qr','Generators','▦','QR code generator','Turn a link or text into a QR code',{k:'q'});
+/* AI */
+A('ai-grammar','✨','AI grammar checker','Fix spelling, grammar and punctuation',[['Fix my text','Fix the grammar, spelling and punctuation of the text. Return the corrected text first, then a short list of what you changed.']]);
+A('ai-paraphrase','🔄','AI paraphraser','Rewrite text in a new style',[['Standard','Paraphrase the text, keeping the meaning.'],['Formal','Rewrite the text in a formal tone.'],['Simple','Rewrite the text in very simple words.']]);
+A('ai-summary','📝','AI summarizer','Shrink long text into key points',[['Short summary','Summarize the text in 3 to 4 sentences.'],['Bullet points','Summarize the text as clear bullet points.']]);
+A('ai-translate','🌍','AI translator','Urdu, English and Roman Urdu',[['To Urdu','Translate the text into natural Urdu.'],['To English','Translate the text into natural English.'],['To Roman Urdu','Write the text in Roman Urdu (Urdu in English letters).']]);
+A('ai-email','✉️','AI email writer','Turn rough notes into a clear email',[['Professional','Write a professional email from these notes.'],['Friendly','Write a warm, friendly email from these notes.']]);
+A('ai-essay','🎓','AI essay writer','A structured essay from a topic',[['Write essay','Write a well-structured essay (introduction, body, conclusion) on this topic.']]);
+A('ai-code','💻','AI code explainer','Explain code in plain words',[['Explain','Explain what this code does in simple words and point out any bugs.']]);
+A('ai-caption','📱','AI caption maker','Captions and hashtags for posts',[['Make captions','Write 5 catchy social media captions with hashtags for this post idea.']]);
+
+/* AI call: swap this one function for your own backend when you host on your own domain */
+async function ai(ins,txt){if(!txt.trim())throw Error('Please enter some text first.');const s=window.claude&&await claude.use('sample').catch(()=>null);if(!s)throw Error('AI is not connected here yet.');return(await s(ins+'\n\n---\n'+txt+'\n---\nReply with only the result.')).text}
+/* accounts (demo: stored in this browser only) */
+let mode='in',cat='All';
+const U=()=>LS.g('ait_u')||{},me=()=>LS.g('ait_s'),hs=async p=>H('SHA-256')(p);
+function hdr(){const s=me();$('acct').innerHTML=s?`<span class="hi">Hi, ${esc(s.n)}</span><button class="btn s" onclick="out()">Sign out</button>`:`<button class="btn s" onclick="auth('in')">Sign in</button><button class="btn" onclick="auth('up')">Sign up</button>`}
+function out(){LS.s('ait_s',null);hdr();route()}
+function auth(m){mode=m;$('auT').textContent=m=='in'?'Welcome back':'Create your account';$('auNW').hidden=m=='in';$('auS').textContent=m=='in'?'Sign in':'Sign up';$('auW').textContent=m=='in'?'New here? Create an account':'Have an account? Sign in';$('auM').textContent='';if(!$('au').open)$('au').showModal()}
+async function sub(e){e.preventDefault();const m=$('auE').value.trim().toLowerCase(),u=U(),h=await hs($('auP').value);if(mode=='up'){if(u[m])return $('auM').textContent='This email already has an account.';u[m]={n:$('auN').value.trim()||m.split('@')[0],h};LS.s('ait_u',u)}else if(!u[m]||u[m].h!=h)return $('auM').textContent='Wrong email or password.';LS.s('ait_s',{n:u[m].n});$('au').close();hdr();route()}
+function sendC(e){e.preventDefault();location.href='mailto:freetoolsxgaming@gmail.com?subject='+encodeURIComponent('['+$('cT').value+'] '+$('cN').value)+'&body='+encodeURIComponent($('cM').value+'\n\nFrom: '+$('cN').value+' ('+$('cE').value+')')}
+function thm(){const d=document.documentElement;d.dataset.theme=getComputedStyle(d).getPropertyValue('--bg').trim()=='#0a0a10'?'light':'dark'}
+/* home */
+const card=(t,i=0)=>`<a class="tool" href="#${t.id}" style="animation-delay:${i*45}ms">${t.k=='a'?'<em class="lk">Sign in</em>':''}<span class="ico">${t.ic}</span><span><b>${t.nm}</b><small>${t.ds}</small></span></a>`,AD='<div class="ad"><!-- ADS: paste your ad code here --><span>Advertisement</span></div>';
+function draw(){const q=$('q').value.trim().toLowerCase(),cs=['All',...new Set(D.map(t=>t.cat))],n=c=>D.filter(t=>c=='All'||t.cat==c).length;$('nav').innerHTML=cs.map(c=>`<button data-c="${c}" aria-current="${c==cat}">${c} (${n(c)})</button>`).join('');const L=D.filter(t=>(cat=='All'||t.cat==cat)&&(t.nm+' '+t.ds+' '+t.cat).toLowerCase().includes(q));$('list').innerHTML=L.map((t,i)=>card(t,i%12)+(i==7||i==23?AD:'')).join('')||'<p class="d">No tool found. Try another word.</p>'}
+/* tool pages */
+function open(t){const el=$('tool');el.onclick=el.oninput=null;let h=`<h2>${t.nm}</h2><p class="d">${t.ds}</p>`;
+if(t.k=='a'&&!me()){el.innerHTML=h+'<p>AI tools are free, but you need to sign in first.</p><div class="bar"><button class="btn" onclick="auth(\'up\')">Sign up</button><button class="btn s" onclick="auth(\'in\')">Sign in</button></div>';return}
+if(t.k=='t'||t.k=='a'){el.innerHTML=h+`<textarea id="in" placeholder="Type or paste your text here"></textarea><div class="bar">${t.m.map((m,i)=>`<button class="btn" data-i="${i}">${m[0]}</button>`).join('')}</div><textarea id="out" readonly placeholder="Your result appears here"></textarea><div class="bar"><button class="btn s" id="cp">Copy result</button></div>`;
+el.onclick=async e=>{const b=e.target.closest('[data-i]'),o=$('out');if(e.target.id=='cp')return navigator.clipboard.writeText(o.value).catch(()=>{});if(!b)return;const m=t.m[b.dataset.i];o.value='Working...';try{o.value=t.k=='a'?await ai(m[1],$('in').value):await m[1]($('in').value)}catch(x){o.value=(x&&x.message)||'Could not do that. Check your input.'}}}
+else if(t.k=='c'){const fl=t.fl.map(s=>s.split(':'));el.innerHTML=h+`<div class="row">${fl.map(([l,y,d=''])=>`<div><label>${l}</label>${y=='s'?`<select data-f>${d.split('|').map(o=>`<option>${o}</option>`).join('')}</select>`:`<input data-f type="${y=='n'?'number':y=='d'?'date':'text'}" inputmode="${y=='n'?'decimal':'text'}" value="${d}">`}</div>`).join('')}</div><div class="bar"><button class="btn" id="go">Calculate</button></div><div class="res" id="res"></div>`;
+const go=()=>{const v=E('[data-f]').map((e,i)=>fl[i][1]=='n'?(e.value==''?NaN:+e.value):e.value);$('res').innerHTML='';if(v.some((x,i)=>fl[i][1]!='s'&&(x===''||x!==x)))return;try{$('res').innerHTML=t.fn(v).map(([a,b])=>`<div>${a}<b>${b}</b></div>`).join('')}catch(x){$('res').innerHTML='<div>Check your input<b>-</b></div>'}};el.oninput=go;$('go').onclick=go;go()}
+else if(t.k=='u'){const o=Object.keys(t.u).map(k=>`<option>${k}</option>`).join('');el.innerHTML=h+`<div class="row"><div><label>Value</label><input id="uv" type="number" value="1" inputmode="decimal"></div><div><label>From</label><select id="uf">${o}</select></div><div><label>To</label><select id="ut">${o}</select></div></div><div class="res" id="res"></div>`;$('ut').selectedIndex=1;
+const go=()=>{const v=parseFloat($('uv').value),a=$('uf').value,b=$('ut').value;if(isNaN(v))return $('res').innerHTML='';let x;if(t.T){const c=a=='°C'?v:a=='°F'?(v-32)*5/9:v-273.15;x=b=='°C'?c:b=='°F'?c*9/5+32:c+273.15}else x=v*t.u[a]/t.u[b];$('res').innerHTML=`<div>${v} ${a} =<b>${f(x,6)} ${b}</b></div>`};el.oninput=go;go()}
+else{el.innerHTML=h+'<input id="qt" placeholder="https://example.com"><div id="qo" style="margin-top:16px;background:#fff;padding:12px;display:inline-block"></div><p class="d">Press and hold the code to save it.</p>';el.oninput=()=>{const b=$('qo'),v=$('qt').value.trim();b.innerHTML='';b.hidden=!v;if(v&&window.QRCode)new QRCode(b,{text:v,width:220,height:220})};el.oninput()}}
+const P={about:`<h2>About Aasaan Tools</h2><p class="d">Free everyday tools in one place.</p><p>Aasaan Tools is a free collection of everyday online tools: text tools, calculators, converters, developer tools, generators and AI helpers. There is nothing to install, and most tools work without an account.</p><p>This website was created by Ibrar Ahmad. The goal is simple: tools that are quick to use, free for everyone, and respectful of your privacy.</p><p>The site may show ads, which helps keep the tools free. Found a problem, or want a new tool? <a href="#contact">Contact us</a> and we will work on it.</p>`,privacy:`<h2>Privacy Policy</h2><p class="d">Last updated: 12 October 2026</p><h3>Your input</h3><p>Most tools run entirely in your browser. The text, numbers and files you enter are not sent to our servers and are not stored by us.</p><h3>AI tools</h3><p>When you press a button in an AI tool, the text you entered is sent to an AI service to create the result. Please do not enter passwords or sensitive personal information.</p><h3>Accounts</h3><p>If you create an account, your name, email and password are used only to sign you in. Passwords are stored in hashed form, never as plain text. We keep you signed in using your browser storage.</p><h3>Contact messages</h3><p>If you email us, we use your message and email address only to reply to you and to improve the site.</p><h3>Ads and cookies</h3><p>We may show ads from third-party vendors, including Google. These vendors may use cookies to show ads based on your earlier visits to this and other websites. You can turn off personalized ads in your Google Ads Settings.</p><h3>Children</h3><p>This site is not directed at children under 13.</p><h3>Changes</h3><p>We may update this policy, and the date above will change when we do.</p><p>Questions? Email <a href="mailto:freetoolsxgaming@gmail.com">freetoolsxgaming@gmail.com</a>.</p>`,terms:`<h2>Terms of Use</h2><p class="d">Last updated: 12 October 2026</p><p>By using Aasaan Tools you agree to these terms.</p><h3>Use of the tools</h3><p>The tools are free and provided as they are, with no guarantee that they are error-free or always available. Please do not misuse the site, try to break or overload it, or use it for anything unlawful.</p><h3>Not professional advice</h3><p>Results from calculators, converters and AI tools are for information only. They are not financial, legal, medical, tax or religious advice. For matters such as loans, tax, health or Zakat, please check with a qualified person.</p><h3>AI results</h3><p>AI output can be wrong or incomplete. Please check it before you rely on it.</p><h3>Accounts</h3><p>Keep your password safe. We may remove accounts that misuse the site.</p><h3>Your content</h3><p>You keep ownership of what you enter. We do not claim any rights to it.</p><h3>Liability</h3><p>We are not responsible for any loss that comes from using the site or its results.</p><h3>Changes</h3><p>We may change the site or these terms at any time. Continuing to use the site means you accept the changes.</p><p>Questions? Email <a href="mailto:freetoolsxgaming@gmail.com">freetoolsxgaming@gmail.com</a>.</p>`};
+function route(){const id=location.hash.slice(1),t=D.find(x=>x.id==id),p=P.hasOwnProperty(id)?P[id]:'';$('home').hidden=!!(t||p)||id=='contact';$('ct').hidden=id!='contact';$('tv').hidden=!t;$('pg').hidden=!p;if(p)$('pgc').innerHTML=p;if(t)open(t);scrollTo(0,0)}
+document.addEventListener('click',e=>{const b=e.target.closest('.res div');if(b&&b.lastChild)navigator.clipboard.writeText(b.lastChild.textContent).catch(()=>{})});
+$('nav').onclick=e=>{const b=e.target.closest('button');if(b){cat=b.dataset.c;draw()}};
+addEventListener('hashchange',route);
+$('cnt').textContent=D.length;$('pop').innerHTML=['ai-grammar','ai-translate','emi','age','pw','qr','words','pct','json','len','zakat','bmi'].map((i,n)=>card(D.find(t=>t.id==i),n)).join('');$('fl').innerHTML=['🔑','▦','🎂','%','✨','📊','🏦','🌍','💻','🔐'].map((c,i)=>`<i style="left:${4+i*10}%;font-size:${20+i%3*12}px;animation-delay:${-i*.9}s">${c}</i>`).join('');hdr();draw();route();
+</script></body></html>
