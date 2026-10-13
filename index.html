@@ -181,8 +181,8 @@ A('ai-essay','🎓','AI essay writer','A structured essay from a topic',[['Write
 A('ai-code','💻','AI code explainer','Explain code in plain words',[['Explain','Explain what this code does in simple words and point out any bugs.']]);
 A('ai-caption','📱','AI caption maker','Captions and hashtags for posts',[['Make captions','Write 5 catchy social media captions with hashtags for this post idea.']]);
 
-/* AI call: swap this one function for your own backend when you host on your own domain */
-async function ai(ins,txt){if(!txt.trim())throw Error('Please enter some text first.');const s=window.claude&&await claude.use('sample').catch(()=>null);if(!s)throw Error('AI is not connected here yet.');return(await s(ins+'\n\n---\n'+txt+'\n---\nReply with only the result.')).text}
+/* AI call: goes through the Cloudflare Worker, which keeps the Gemini key secret */
+async function ai(ins,txt){if(!txt.trim())throw Error('Please enter some text first.');const r=await fetch('https://aasaan-ai.freetoolsxgaming.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:ins+'\n\n---\n'+txt+'\n---\nReply with only the result.'})});const d=await r.json().catch(()=>({}));if(!r.ok)throw Error(d.error||'The AI service had a problem. Please try again.');return d.text||'No result. Please try again.'}
 /* accounts (demo: stored in this browser only) */
 let mode='in',cat='All';
 const U=()=>LS.g('ait_u')||{},me=()=>LS.g('ait_s'),hs=async p=>H('SHA-256')(p);
