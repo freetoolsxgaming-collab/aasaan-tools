@@ -16,7 +16,7 @@ body{margin:0;background:radial-gradient(900px 420px at 50% -100px,color-mix(in 
 h1,h2,h3,.logo,#sp b{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;margin:0}
 header,#home,#tv,#ct,footer{max-width:1000px;margin:auto;padding-left:16px;padding-right:16px}
 header{display:flex;align-items:center;gap:10px;padding-top:14px;padding-bottom:14px}
-.logo{font-size:28px;color:var(--ink);text-decoration:none;margin-right:auto}
+.logo{font-size:clamp(20px,6vw,28px);white-space:nowrap;color:var(--ink);text-decoration:none;margin-right:auto}
 .logo span{color:var(--gold)}
 .mn{display:none}.mn a,footer a{color:var(--mute);text-decoration:none}
 #acct{display:flex;align-items:center;gap:8px}
@@ -101,6 +101,8 @@ footer{text-align:center;color:var(--mute);font-size:14px;padding-top:30px;paddi
 #pgc h3{font-size:22px;margin:18px 0 6px}
 #pgc a{color:var(--gold)}
 footer a{margin:0 4px}
+.in .lk{display:none}
+@media(max-width:520px){.hi{display:none}header{gap:6px}#acct .btn{padding:8px 10px}}
 </style></head><body>
 
 <header><a class="logo" href="#">Aasaan <span>Tools</span></a><nav class="mn"><a href="#contact">Contact</a></nav><div id="acct"></div><button class="ic" onclick="thm()" aria-label="Switch light or dark theme">&#9680;</button></header>
@@ -184,7 +186,7 @@ async function ai(ins,txt){if(!txt.trim())throw Error('Please enter some text fi
 /* accounts (demo: stored in this browser only) */
 let mode='in',cat='All';
 const U=()=>LS.g('ait_u')||{},me=()=>LS.g('ait_s'),hs=async p=>H('SHA-256')(p);
-function hdr(){const s=me();$('acct').innerHTML=s?`<span class="hi">Hi, ${esc(s.n)}</span><button class="btn s" onclick="out()">Sign out</button>`:`<button class="btn s" onclick="auth('in')">Sign in</button><button class="btn" onclick="auth('up')">Sign up</button>`}
+function hdr(){const s=me();document.documentElement.classList.toggle('in',!!s);$('acct').innerHTML=s?`<span class="hi">Hi, ${esc(s.n)}</span><button class="btn s" onclick="out()">Sign out</button>`:`<button class="btn s" onclick="auth('in')">Sign in</button><button class="btn" onclick="auth('up')">Sign up</button>`}
 function out(){LS.s('ait_s',null);hdr();route()}
 function auth(m){mode=m;$('auT').textContent=m=='in'?'Welcome back':'Create your account';$('auNW').hidden=m=='in';$('auS').textContent=m=='in'?'Sign in':'Sign up';$('auW').textContent=m=='in'?'New here? Create an account':'Have an account? Sign in';$('auM').textContent='';if(!$('au').open)$('au').showModal()}
 async function sub(e){e.preventDefault();const m=$('auE').value.trim().toLowerCase(),u=U(),h=await hs($('auP').value);if(mode=='up'){if(u[m])return $('auM').textContent='This email already has an account.';u[m]={n:$('auN').value.trim()||m.split('@')[0],h};LS.s('ait_u',u)}else if(!u[m]||u[m].h!=h)return $('auM').textContent='Wrong email or password.';LS.s('ait_s',{n:u[m].n});$('au').close();hdr();route()}
