@@ -255,14 +255,14 @@ addEventListener('hashchange',route);
 $('cnt').textContent=D.length;$('pop').innerHTML=['ai-grammar','ai-translate','emi','age','pw','qr','words','pct','json','len','zakat','bmi'].map((i,n)=>card(D.find(t=>t.id==i),n)).join('');$('fl').innerHTML=['🔑','▦','🎂','%','✨','📊','🏦','🌍','💻','🔐'].map((c,i)=>`<i style="left:${4+i*10}%;font-size:${20+i%3*12}px;animation-delay:${-i*.9}s">${c}</i>`).join('');$('q').addEventListener('input',draw);$('q').addEventListener('keyup',draw);applyLang();route();if(window.FB)startFB();else addEventListener('fbready',startFB);
 </script><script type="module">
 import{initializeApp}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-import{getAuth,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword,GoogleAuthProvider,signInWithPopup,signOut,updateProfile}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import{getAuth,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword,GoogleAuthProvider,signInWithRedirect,getRedirectResult,signOut,updateProfile}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import{getFirestore,doc,getDoc,setDoc}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 const app=initializeApp({apiKey:"AIzaSyCEcdiraoHvb-E20n41oVOZaGNrN7Qpgxk",authDomain:"aasaan-tools.firebaseapp.com",projectId:"aasaan-tools",storageBucket:"aasaan-tools.firebasestorage.app",messagingSenderId:"315282729214",appId:"1:315282729214:web:2e609235b5b9fd59aaddaf"});
-const auth=getAuth(app),db=getFirestore(app);
+const auth=getAuth(app),db=getFirestore(app);getRedirectResult(auth).catch(()=>{});
 window.FB={
 signUp:async(e,p,n)=>{const c=await createUserWithEmailAndPassword(auth,e,p);try{await updateProfile(c.user,{displayName:n});await setDoc(doc(db,"users",c.user.uid),{name:n,bio:"",pic:""})}catch(x){}return c.user},
 signIn:async(e,p)=>(await signInWithEmailAndPassword(auth,e,p)).user,
-google:async()=>{const c=await signInWithPopup(auth,new GoogleAuthProvider()),r=doc(db,"users",c.user.uid);try{if(!(await getDoc(r)).exists())await setDoc(r,{name:c.user.displayName||"",bio:"",pic:c.user.photoURL||""})}catch(x){}return c.user},
+google:async()=>{await signInWithRedirect(auth,new GoogleAuthProvider());return null},
 out:()=>signOut(auth),
 load:async u=>{const s=await getDoc(doc(db,"users",u.uid));return s.exists()?s.data():{}},
 save:(uid,d)=>setDoc(doc(db,"users",uid),d,{merge:true}),
